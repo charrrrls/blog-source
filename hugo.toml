@@ -75,69 +75,74 @@ hideSummary = false
 showtoc = false
 tocopen = false
 
-assets:
-    # disableHLJS: true # to disable highlight.js
-    # disableFingerprinting: true
+[params.assets]
+    # disableHLJS = true # to disable highlight.js
+    # disableFingerprinting = true
     favicon = "<link / abs url>"
     favicon16x16 = "<link / abs url>"
     favicon32x32 = "<link / abs url>"
     apple_touch_icon = "<link / abs url>"
     safari_pinned_tab = "<link / abs url>"
 
-label:
+[params.label]
     text = "首页"
-    icon = /apple-touch-icon.png
+    icon = "/apple-touch-icon.png"
     iconHeight = 35
 
 # profile-mode
-profileMode:
+[params.profileMode]
     enabled = false # needs to be explicitly set
-    title = ExampleSite
+    title = "ExampleSite"
     subtitle = "This is subtitle"
     imageUrl = "<img location>"
     imageWidth = 120
     imageHeight = 120
-    imageTitle = my image
-    buttons:
-        - name = Posts
-          url = posts
-        - name = Tags
-          url = tags
+    imageTitle = "my image"
+    [[params.profileMode.buttons]]
+        name = "Posts"
+        url = "posts"
+    [[params.profileMode.buttons]]
+        name = "Tags"
+        url = "tags"
 
 # home-info mode
-homeInfoParams:
+[params.homeInfoParams]
     Title = "Hi there 👋"
     Content = "Welcome to my blog"
 
-socialIcons:
-    - name = github
-      url = "https://github.com/charrrrls"
-    - name = email
-      url = "mailto:164527250+charrrrls@users.noreply.github.com"
-    - name = rss
-      url = "/index.xml"
+[[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/charrrrls"
 
-analytics:
-    google:
+[[params.socialIcons]]
+    name = "email"
+    url = "mailto:164527250+charrrrls@users.noreply.github.com"
+
+[[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+[params.analytics]
+    [params.analytics.google]
         SiteVerificationTag = "XYZabc"
-    bing:
+    [params.analytics.bing]
         SiteVerificationTag = "XYZabc"
-    yandex:
+    [params.analytics.yandex]
         SiteVerificationTag = "XYZabc"
 
-cover:
+[params.cover]
     hidden = true # hide everywhere but not in structured data
     hiddenInList = true # hide on list pages and home
     hiddenInSingle = true # hide on single page
 
-editPost:
+[params.editPost]
     URL = "https://github.com/charrrrls/blog-source/tree/main/content"
     Text = "Suggest Changes" # edit text
     appendFilePath = true # to append file path to Edit link
 
 # for search
 # https://fusejs.io/api/options.html
-fuseOpts:
+[params.fuseOpts]
     isCaseSensitive = false
     shouldSort = true
     location = 0
